@@ -169,6 +169,3 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-
-//Rahul
-//anu
