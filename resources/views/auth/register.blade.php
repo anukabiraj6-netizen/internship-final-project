@@ -70,27 +70,21 @@
 
                                 <label class="form-label">Select Role</label>
 
-                                <select name="role" id="role" class="form-control" onchange="showFields()" required>
+                                <select name="role_id" id="role" class="form-control" onchange="showFields()" required>
 
                                     <option value="">Select Role</option>
 
-                                    <option value="Patient">Patient</option>
+                                    <option value="2">Patient</option>
 
-                                    <option value="Pharmacy">Pharmacy</option>
+                                    <option value="3">Pharmacy</option>
 
-                                    <option value="Hospital">Hospital</option>
+                                    <option value="4">Hospital</option>
 
                                 </select>
 
                             </div>
 
-                            <div class="mb-3">
-                                <label>Pharmacy</label>
-                                <select name="pharmacy_id" class="form-control">
-                                    <option value="">Select Pharmacy</option>
-
-                                    @foreach ($pharmacies as $pharmacy)
-                                        <option value="{{ $pharmacy->id }}">
+                                  <option value="{{ $pharmacy->id }}">
                                             {{ $pharmacy->pharmacy_name }}
                                         </option>
                                     @endforeach
@@ -251,15 +245,15 @@
             document.getElementById('pharmacyFields').style.display = 'none';
             document.getElementById('hospitalFields').style.display = 'none';
 
-            if (role == "Patient") {
+            if (role == "2") {
                 document.getElementById('patientFields').style.display = 'block';
             }
 
-            if (role == "Pharmacy") {
+            if (role == "3") {
                 document.getElementById('pharmacyFields').style.display = 'block';
             }
 
-            if (role == "Hospital") {
+            if (role == "4") {
                 document.getElementById('hospitalFields').style.display = 'block';
             }
 
