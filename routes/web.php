@@ -168,3 +168,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pharmacy/dashboard',[PharmacyDashboardController::class, 'index'])->name('pharmacy.dashboard');
 
 });
+
+
+//Rahul
